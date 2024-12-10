@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Query Chatbot</title>
+</head>
+<body>
+    <h1>User Query Chatbot</h1>
+    <form id="query-form">
+        <textarea name="query" id="query" rows="5" cols="50" placeholder="Enter your query here..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response">
+        <!-- Response will appear here -->
+    </div>
+
+    <script>
+        const form = document.getElementById("query-form");
+        form.onsubmit = async (event) => {
+            event.preventDefault();
+            const query = document.getElementById("query").value;
+            const responseDiv = document.getElementById("response");
+
+            const response = await fetch("/query", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ query })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                responseDiv.innerHTML = `
+                    <p><strong>Cleaned Query:</strong> ${data.cleaned_query}</p>
+                    <p><strong>Sentiment:</strong> ${data.sentiment}</p>
+                    <p><strong>Confidence:</strong> ${data.confidence.toFixed(2)}</p>
+                `;
+            } else {
+                responseDiv.innerHTML = `<p><strong>Error:</strong> ${data.error}</p>`;
+            }
+        };
+    </script>
+</body>
+</html>
