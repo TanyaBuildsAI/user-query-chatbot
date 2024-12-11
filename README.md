@@ -17,3 +17,17 @@ user_query_agent/ ├── app.py # Main Flask application ├── query_proc
    ```bash
    git clone git@github.com:TanyaBuildsAI/user-query-chatbot.git
    cd user-query-chatbot
+
+2. Create a virtual environment and install dependencies:
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+pip install flask transformers
+
+3.Start the Flask app:
+bash
+Copy code
+python app.py
+Open your browser and go to: http://127.0.0.1:5000
