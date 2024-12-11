@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Query Chatbot</title>
+    <title>Chatbot - E-Commerce Support</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>User Query Chatbot</h1>
-    <form id="query-form">
-        <textarea name="query" id="query" rows="5" cols="50" placeholder="Enter your query here..."></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="response">
-        <!-- Response will appear here -->
+    <div class="chat-container">
+        <h1>E-Commerce Chatbot</h1>
+        
+        <!-- Chat display area -->
+        <div class="chat-window">
+            {% if chat_history %}
+                {% for message in chat_history %}
+                    <div class="chat-message {{ message.sender | lower }}">
+                        <strong>{{ message.sender }}:</strong> {{ message.text }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <!-- Chat input form -->
+        <form action="/chat" method="post" class="chat-form">
+            <textarea name="user_query" rows="3" placeholder="Ask about products, pricing, or availability..."></textarea>
+            <button type="submit">Send</button>
+        </form>
     </div>
-
-    <script>
-        const form = document.getElementById("query-form");
-        form.onsubmit = async (event) => {
-            event.preventDefault();
-            const query = document.getElementById("query").value;
-            const responseDiv = document.getElementById("response");
-
-            const response = await fetch("/query", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ query })
-            });
-
-            const data = await response.json();
-            if (response.ok) {
-                responseDiv.innerHTML = `
-                    <p><strong>Cleaned Query:</strong> ${data.cleaned_query}</p>
-                    <p><strong>Sentiment:</strong> ${data.sentiment}</p>
-                    <p><strong>Confidence:</strong> ${data.confidence.toFixed(2)}</p>
-                `;
-            } else {
-                responseDiv.innerHTML = `<p><strong>Error:</strong> ${data.error}</p>`;
-            }
-        };
-    </script>
 </body>
 </html>

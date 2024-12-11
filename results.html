@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Combined Query Results</h1>
+    
+    <h2>Your Query</h2>
+    <p>{{ query }}</p>
+    
+    <h2>Product Recommendation</h2>
+    <p><strong>Title:</strong> {{ rag_result['name_title'] }}</p>
+    <p><strong>Description:</strong> {{ rag_result['description'] }}</p>
+    <p><strong>Price:</strong> {{ rag_result['sale_price'] }}</p>
+    <p><strong>Rating:</strong> {{ rag_result['average_product_rating'] }}</p>
+
+    <h2>Sentiment Analysis</h2>
+    <p><strong>Sentiment:</strong> {{ sentiment_result['label'] }}</p>
+    <p><strong>Confidence:</strong> {{ sentiment_result['score'] }}</p>
+
+    <h2>Final Response</h2>
+    <p>{{ final_response }}</p>
+</body>
+</html>

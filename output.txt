@@ -1,0 +1,99 @@
+Text: I love learning about AI tools!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This is a terrible idea.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I feel neutral about this project.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I love the new product features; they’re fantastic!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This service is absolutely terrible, and I regret using it.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I’m not sure how I feel about this—it’s okay, I guess.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The support team was incredibly helpful and friendly.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: I wouldn’t recommend this to my worst enemy.
+Sentiment: NEGATIVE, Confidence: 0.94
+
+Text: This is the best decision I’ve made all year!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The experience was mediocre at best.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I feel neutral about the changes you’ve made.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: Amazing customer service! You’ve earned a loyal customer.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The interface is confusing and hard to use.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I absolutely adore how smooth everything works now.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The delivery was late, and I didn’t receive everything I ordered.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: This was a complete waste of time and money.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: You’ve exceeded my expectations with this update.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The app keeps crashing, and I can’t get anything done.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I’m really impressed with the attention to detail.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This is one of the worst experiences I’ve ever had.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I’m satisfied with the product, but the packaging could be better.
+Sentiment: NEGATIVE, Confidence: 0.93
+
+Text: The tutorial was clear and easy to follow.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This update doesn’t add much value to the app.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: The colors and design are very appealing.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: I can’t believe how terrible the customer service is.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I’m indifferent to the whole thing; it doesn’t matter much to me.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: The product was exactly as described—great quality!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The refund process was quick and easy; I’m happy with the resolution.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: I didn’t expect much, but I was pleasantly surprised.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This new feature has made my workflow so much easier.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: It’s hard to say whether I like or dislike the new design.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: The results were far better than I could have imagined.
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: I’m deeply disappointed with the overall quality.
+Sentiment: NEGATIVE, Confidence: 1.00
+
