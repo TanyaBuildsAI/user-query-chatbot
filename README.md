@@ -1,33 +1,44 @@
-# User Query Chatbot
+# E-Commerce Chatbot
 
-## Overview
-The **User Query Chatbot** is an interactive tool designed to process user queries, analyze sentiment, and provide real-time feedback. It serves as a modular agent that integrates with other components, such as the **Sentiment Analysis Agent**, and can be extended with additional features like retrieval-augmented generation (RAG).
+This project is an AI-powered chatbot for e-commerce support, combining **Retrieval-Augmented Generation (RAG)** and **Sentiment Analysis** to provide dynamic, tone-aware product recommendations.
 
-## Features
-- **Query Cleaning and Validation**: Ensures user input is sanitized and meets length requirements.
-- **Sentiment Analysis**: Analyzes user input for sentiment (Positive/Negative) using Hugging Face transformers.
-- **Interactive Web Interface**: A responsive and styled chatbot interface for real-time user interaction.
+---
 
-## Folder Structure
-user_query_agent/ ├── app.py # Main Flask application ├── query_processing.py # Helper functions for query cleaning ├── templates/ │ └── index.html # Frontend HTML template ├── static/ │ └── style.css # CSS for styling the chatbot interface ├── README.md # Documentation
+## Current Features
 
+### Chatbot Capabilities
+1. **Dynamic Responses:**
+   - Fetches product information from a dataset based on user queries.
+   - Provides responses tailored to user sentiment.
 
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:TanyaBuildsAI/user-query-chatbot.git
-   cd user-query-chatbot
+2. **Sentiment Analysis:**
+   - Adjusts response tone based on detected sentiment (Positive, Neutral, Negative).
 
-2. Create a virtual environment and install dependencies:
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
-pip install flask transformers
+3. **RAG Integration:**
+   - Searches an e-commerce dataset to find relevant product information.
+   - Returns product details such as name, description, price, and rating.
 
-3.Start the Flask app:
-bash
-Copy code
-python app.py
-Open your browser and go to: http://127.0.0.1:5000
+### Example Interactions
+#### Query: "Can you help me find a new pair of capris?"
+**Response:**
+I'm here to help with your concern.
+
+Product: Example Product
+Description: This is an example description.
+Price: $99
+Rating: 4.5
+
+### Installation Instructions
+Clone the Repository:
+git clone https://github.com/YourUsername/Ecommerce-Chatbot.git
+cd Ecommerce-Chatbot
+
+### Set Up the Environment:
+- python -m venv venv
+- source venv/bin/activate  # For macOS/Linux
+- venv\Scripts\activate     # For Windows
+- pip install -r requirements.txt
+
+### Run the Flask App:
+flask run
+Access the Chatbot: Open a browser and navigate to http://127.0.0.1:5000
